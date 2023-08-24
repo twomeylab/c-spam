@@ -7,8 +7,8 @@
 #!/usr/bin/env python3
 
 """
-Authors:
-Source Code: 
+Authors: Alejandra Montano Romero, Calli Bonin
+Source Code: Rubinstein, J. L., Guo, H., Ripstein, Z. A., Haydaroglu, A., Au, A., Yip, C. M., Di Trani, J. M., Benlekbir, S. & Kwok, T. (2019). Shake-it-off: a simple ultrasonic cryo-EM specimen-preparation device. Acta Cryst. D75, 1063–1070. 
 Description: This file encodes a GUI to run the C-SPAM device by calling to the CSPAMfunctions.py script.
 """
 
@@ -55,7 +55,7 @@ def startprocess():
     if donotplunge.value==1:
         abort()
     else:
-        if float(ldelay.value)/1000 < 0.043:
+        if float(ldelay.value)/1000 < 0.050:
             print("starting fast resolution process")
             leddelay = 0.043-(float(ldelay.value)/1000) #delay after plunger falls before turning on LED
             startingprocesstime = time.perf_counter_ns()/(10**6)

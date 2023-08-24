@@ -11,9 +11,9 @@
 #!/usr/bin/env python3
 
 """
-Authors:
-Source Code:
-Description: This file contains functions to control the C-SPAM devicefor fast millisecond resolution of samples. Functions are designed to power up or down sensors, turn on or off LED, set LED intensity, move the blotting filter forward or back, release or reset the plunger, or end all processes.
+Authors: Alejandra Montano Romero, Calli Bonin
+Source Code: Rubinstein, J. L., Guo, H., Ripstein, Z. A., Haydaroglu, A., Au, A., Yip, C. M., Di Trani, J. M., Benlekbir, S. & Kwok, T. (2019). Shake-it-off: a simple ultrasonic cryo-EM specimen-preparation device. Acta Cryst. D75, 1063–1070.
+Description: This file contains functions to control the C-SPAM device for fast millisecond resolution of samples. Functions are designed to power up or down sensors, turn on or off LED, set LED intensity, move the blotting filter forward or back, release or reset the plunger, or end all processes.
 """
 
 # Set up
@@ -169,7 +169,7 @@ def applyandplungeFAST(rdelay,pdelay,ldelay,ledint):
         leddelay: float
             Seconds before LED is turned on.
         ledint: float 
-            Percentage of LED intensity 
+            Percentage of LED intensity. 
     """
     global applytime 
     applytime = time.perf_counter_ns()/(10**6)
